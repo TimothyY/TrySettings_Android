@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TrySettings_Android</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+    <string-array name="listPreference_example_titles">
+        <item>First Choice</item>
+        <item>Second Choice</item>
+        <item>Third Choice</item>
+    </string-array>
+    <string-array name="listPreference_example_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+
+</resources>
