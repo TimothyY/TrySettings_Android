@@ -1,43 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory
-        android:title="Preference Category 01"
-        android:key="prefCat1">
+    <PreferenceCategory android:title="Preference Category 01">
+
+        <Preference
+            android:title="Preference"
+            android:summary="This is an example of Preference (uneditable by user). Use this to show some text."
+            android:key="preference_example" />
+
         <SwitchPreference
-            android:defaultValue="true"
-            android:key="switchPreference_example"
+            android:title="Switch Preference"
             android:summary="This is an example of Switch Preference. \nUse this for a true/false value option."
-            android:title="Switch Preference" />
+            android:key="switchPreference_example"
+            android:defaultValue="true" />
 
         <!-- NOTE: EditTextPreference accepts EditText attributes. -->
         <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
         <EditTextPreference
-            android:capitalize="words"
-            android:defaultValue="John Smith"
-            android:inputType="textCapWords"
-            android:key="editTextPreference_example"
+            android:title="Edit Text Preference"
             android:summary="This is an example of Edit Text Preference. \nUse this for a user input-String value option."
+            android:key="editTextPreference_example"
+            android:defaultValue="John Smith"
+            android:capitalize="words"
+            android:inputType="textCapWords"
             android:maxLines="1"
             android:selectAllOnFocus="true"
-            android:singleLine="true"
-            android:title="Edit Text Preference" />
+            android:singleLine="true" />
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:title="Preference Category 02"
-        android:key="prefCat2">
+    <PreferenceCategory android:title="Preference Category 02">
         <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
              dismiss it. -->
         <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
         <ListPreference
-            android:defaultValue="3"
+            android:title="List Preference"
+            android:summary="This is an example of List Preference. \nUse this for a predefined-String value option. \nCurrently set into the Third Choice."
+            android:key="listPreference_example"
+            android:defaultValue="Third Choice"
             android:entries="@array/listPreference_example_titles"
             android:entryValues="@array/listPreference_example_values"
-            android:key="listPreference_example"
-            android:summary="This is an example of List Preference. \nUse this for a predefined-String value option."
             android:negativeButtonText="@null"
-            android:positiveButtonText="@null"
-            android:title="List Preference" />
+            android:positiveButtonText="@null" />
     </PreferenceCategory>
 
 </PreferenceScreen>

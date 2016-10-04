@@ -9,9 +9,9 @@
         <item>Third Choice</item>
     </string-array>
     <string-array name="listPreference_example_values">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
+        <item>First Choice</item>
+        <item>Second Choice</item>
+        <item>Third Choice</item>
     </string-array>
 
 
