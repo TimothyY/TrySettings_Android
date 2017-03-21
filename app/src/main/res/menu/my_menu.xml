@@ -5,15 +5,17 @@
         android:title="settings"
         app:showAsAction="always">
     </item>
-    <item android:id="@+id/otherMenu"
-        android:title="Other Menu">
-
+    <item android:id="@+id/login"
+        android:title="login"
+        app:showAsAction="ifRoom">
+    </item>
+    <item android:title="Other Menu">
         <!-- "file" submenu -->
         <menu>
             <item android:id="@+id/subMenu1"
-                android:title="(sub)Menu 01" />
+                android:title="subMenu 01" />
             <item android:id="@+id/subMenu2"
-                android:title="(sub)Menu 02" />
+                android:title="subMenu 02" />
         </menu>
 
     </item>

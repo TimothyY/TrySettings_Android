@@ -10,10 +10,13 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity{
 
+    int loginClickCount;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        loginClickCount=0;
     }
 
     @Override
@@ -32,8 +35,15 @@ public class MainActivity extends AppCompatActivity{
                 Intent i = new Intent(this, MySettingsActivity.class);
                 startActivity(i);
                 return true;
-            case R.id.otherMenu:
-                Toast.makeText(this, "Other menu clicked", Toast.LENGTH_SHORT).show();
+            case R.id.login:
+                if(loginClickCount%2==0){
+                    Toast.makeText(this, "logging in", Toast.LENGTH_SHORT).show();
+                    item.setTitle("logout");
+                }else{
+                    Toast.makeText(this, "logging out ", Toast.LENGTH_SHORT).show();
+                    item.setTitle("login");
+                }
+                loginClickCount++;
                 return true;
             case R.id.subMenu1:
                 Toast.makeText(this, "(sub)Menu 01 clicked", Toast.LENGTH_SHORT).show();
